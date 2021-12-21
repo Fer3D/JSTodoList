@@ -7,7 +7,7 @@ document.addEventListener("DOMContentLoaded", function () {
   let id = 1;
 
   function removeTodo(id) {
-    console.log(id);
+    document.getElementById(id).remove();
   }
 
   btn.onclick = function () {
