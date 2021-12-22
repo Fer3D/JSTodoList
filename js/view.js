@@ -3,7 +3,7 @@ export default class View {
         this.model = null;
         this.table = document.getElementById("table");
         const btn = document.getElementById("add");
-        btn.onclick = function () {
+        btn.onclick = () => {
             this.addTodo("Title", "Description");
         };
     }
