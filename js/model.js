@@ -11,6 +11,12 @@ export default class Model {
         return this.todos;
     }
     addTodo(title, description) {
-        console.log(title, description);
+        const todo = {
+            id: 0,
+            title: title,
+            description: description,
+            completed: false,
+        }
+        console.log(todo);
     }
 }
