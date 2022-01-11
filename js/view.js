@@ -1,15 +1,19 @@
+import AddTodo from './components/add-todo.js'
+
 export default class View {
     constructor() {
         this.model = null;
-        this.table = document.getElementById("table");
-        const btn = document.getElementById("add");
-        btn.onclick = () => this.addTodo("Title", "Description");
+        this.table = document.getElementById('table');
+        this.addTodoForm = new AddTodo();
+
+        this.addTodoForm.onClick((title, description) => this.addTodo(title, description));
     }
+
     setModel(model) {
         this.model = model;
     }
+
     addTodo(title, description) {
-        this.model.addTodo(title, description);
-        todo.title = 'TitleTestView';
+        const todo = this.model.addTodo(title, description);
     }
 }
